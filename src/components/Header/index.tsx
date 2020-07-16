@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import axios from 'axios';
 
-import { Container, LogoIcon } from './styles';
+import { Container, LogoIcon, SearchIcon } from './styles';
 
 interface StockData {
   latestPrice: number;
@@ -44,7 +44,12 @@ const Header: React.FC = () => {
           required
           onChange={event => setAsset(event.target.value)}
         />
-        <button type="submit">Search</button>
+        <button type="submit">
+          Search
+          <span>
+            <SearchIcon />
+          </span>
+        </button>
       </form>
     </Container>
   );

@@ -6,7 +6,7 @@ const Error: React.FC = () => {
   return (
     <Container>
       <div>
-        <h1>Error, symbol not found</h1>
+        <h1>Symbol not found</h1>
 
         <ErrorIcon />
       </div>

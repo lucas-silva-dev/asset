@@ -27,7 +27,6 @@ export const Container = styled.div`
 
     h1 {
       font-size: 48px;
-      color: #473889;
       color: #f64c75;
     }
   }
@@ -35,8 +34,33 @@ export const Container = styled.div`
   h2 {
     font-size: 32px;
     padding: 10px 20px;
-    color: #473889;
     color: #f64c75;
+  }
+
+  @media (max-width: 420px) {
+    margin: 40px auto;
+
+    width: 340px;
+    height: 220px;
+    padding: 10px;
+
+    div {
+      h1 {
+        font-size: 32px;
+        padding: 4px;
+      }
+
+      svg {
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+      padding: 5px 10px;
+    }
   }
 `;
 

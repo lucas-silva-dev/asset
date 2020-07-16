@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FaSearchDollar } from 'react-icons/fa';
 
 export const Container = styled.div`
-  width: 100%;
+  width: 920px;
   max-width: 1020px;
   height: 460px;
   margin: 40px auto;
@@ -23,6 +23,27 @@ export const Container = styled.div`
     padding: 10px 20px;
     color: #473889;
   }
+
+  @media (max-width: 420px) {
+    margin: 40px auto;
+    width: 340px;
+    height: 220px;
+    padding: 10px;
+
+    grid-template-columns: 4fr 1fr;
+    gap: 0;
+
+    h1 {
+      font-size: 36px;
+      padding: 4px;
+      color: #473889;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 `;
 
 export const SearchIcon = styled(FaSearchDollar)`
@@ -30,7 +51,6 @@ export const SearchIcon = styled(FaSearchDollar)`
 
   width: 120px;
   height: 120px;
-  flex: 1;
 
   color: #473889;
 `;
