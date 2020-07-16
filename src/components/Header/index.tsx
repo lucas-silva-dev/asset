@@ -14,11 +14,6 @@ const Header: React.FC = () => {
   const history = useHistory();
 
   const [asset, setAsset] = useState('');
-  // const [quote, setQuote] = useState<StockData>({} as StockData);
-
-  // useEffect(() => {
-  //   function loadStocks() {}
-  // }, []);
 
   async function handleSubmit(event: ChangeEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -27,26 +22,17 @@ const Header: React.FC = () => {
         `https://cloud.iexapis.com/stable/stock/${asset}/quote?token=pk_6d0042f4630a4e0895c9e06dd7222e1c`,
       );
 
-      // const stocks = {
-      //   latestPrice: data.latestPrice,
-      //   companyName: data.companyName,
-      //   primaryExchange: data.primaryExchange,
-      // };
-
-      // console.log(data);
-
       setAsset('');
-      // setQuote(data);
 
       return history.push('/result', data);
     } catch (err) {
+      setAsset('');
       return history.push('/error');
     }
   }
 
   return (
     <Container>
-      {/* <img src={logo} alt="logo" /> */}
       <Link to="/">
         <LogoIcon />
       </Link>

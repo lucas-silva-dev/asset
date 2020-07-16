@@ -14,9 +14,6 @@ const Result: React.FC = () => {
   const stocks = location.state as StockData;
 
   const [quote, setQuote] = useState<StockData>({} as StockData);
-  // const [price, setPrice] = useState<number>();
-  // const [name, setName] = useState<string>();
-  // const [exchange, setExchange] = useState<string>();
 
   useEffect(() => {
     setQuote(stocks);
